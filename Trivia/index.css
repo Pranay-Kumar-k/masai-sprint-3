@@ -1,0 +1,10 @@
+body {
+    background-image: url("paper.gif");
+    background-color: #cccccc;
+   }
+button {
+    margin:5px;
+}
+h1 {
+    text-align: center;
+}
