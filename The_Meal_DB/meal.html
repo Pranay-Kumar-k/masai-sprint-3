@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEALS</title>
-    <style>
-        .logo > img {
-            width:300px;
-            margin:2% 0% 2% 40%;
-            border-radius: 60%;
-            }
-        div {
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="meal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
 </head>
 <body>
     <div class="logo">
         <img src="https://cdn.dribbble.com/users/5116699/screenshots/11225566/media/a40b74d16eeccd123845dff819d15148.gif">
     </div>
-    <div id="cont">
 
+    <div class="container">
+        <h2>Search For Meal</h2>
+        <div class="flex">
+            <form class="flex" id="submit">
+                <input type="text" id="search" placeholder="search for meals">
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div id="result-heading"></div>
+        <div id="categories"></div>
+        <div id="meals" class="meals"></div>
+        <div id="single-meal"></div>
     </div>
+     
  <script type="text/javascript" src="meal.js"></script>
 </body>
 </html>
