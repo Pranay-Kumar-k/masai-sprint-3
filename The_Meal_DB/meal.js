@@ -4,8 +4,35 @@ random = document.getElementById('random'),
 mealsEl = document.getElementById('meals'),
 resultHeading = document.getElementById('result-heading'),
 single_meal = document.getElementById('single-meal');
+var category = document.getElementById('categories')
 
 window.onload = () => {
+
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET',"https://www.themealdb.com/api/json/v1/1/categories.php")
+    xhr.send()
+
+    xhr.onload = () => {
+        if(xhr.status === 200) {
+            var response = JSON.parse(xhr.response)
+            console.log(response.categories)
+            displayCategories(response.categories)
+        }
+    }
+
+    const displayCategories = (item) => {
+        var items = []
+        for(var i=0;i<item.length;i++) {
+            items.push(item[i].strCategory)
+        }
+        
+        console.log(items)
+        
+        category.innerHTML = `<ul>
+        ${items.map(ing => `<li><a>${ing}</a></li>`).join(" ")}
+        </ul>`
+    }
+
     var form = document.querySelector('form')
     form.addEventListener('submit', function() {
         event.preventDefault()
