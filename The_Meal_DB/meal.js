@@ -7,11 +7,11 @@ single_meal = document.getElementById('single-meal');
 var category = document.getElementById('categories')
 
 window.onload = () => {
-
+    
     var xhr = new XMLHttpRequest()
     xhr.open('GET',"https://www.themealdb.com/api/json/v1/1/categories.php")
     xhr.send()
-
+    
     xhr.onload = () => {
         if(xhr.status === 200) {
             var response = JSON.parse(xhr.response)
@@ -19,6 +19,7 @@ window.onload = () => {
             displayCategories(response.categories)
         }
     }
+    
 
     const displayCategories = (item) => {
         var items = []
@@ -31,18 +32,20 @@ window.onload = () => {
         category.innerHTML = `<ul>
         ${items.map(ing => `<li><a>${ing}</a></li>`).join(" ")}
         </ul>`
+        
+        
     }
-
+    
     var form = document.querySelector('form')
     form.addEventListener('submit', function() {
         event.preventDefault()
-
+        
         const term = search.value;
-
+        
         var xhr = new XMLHttpRequest()
         xhr.open('GET',`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
         xhr.send()
-    
+        
         xhr.onload = () => {
             if(xhr.status === 200) {
                 var data =  JSON.parse(xhr.response)
