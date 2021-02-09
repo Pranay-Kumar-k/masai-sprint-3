@@ -6,6 +6,12 @@ You can go find out the API link here <a href="https://www.themealdb.com/api.php
 
 ![MealsDB Demo](https://github.com/pranaykumar999/masai-sprint-3/blob/main/compressed.gif)
 
+# Screenshots
+
+<img src="https://github.com/pranaykumar999/masai-sprint-3/blob/main/Screenshot%20(397).png" alt="landing page">
+<img src="https://github.com/pranaykumar999/masai-sprint-3/blob/main/Screenshot%20(399).png" alt="results">
+<img src="https://github.com/pranaykumar999/masai-sprint-3/blob/main/Screenshot%20(401).png" alt="details">
+
 # Tech Stacks
 
 * HTML5
