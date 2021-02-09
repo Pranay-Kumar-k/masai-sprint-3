@@ -1,13 +1,13 @@
-# masai-sprint-3
+# The_MealDB - Foodies
 MealDB is a Rest-API which fetches all the data consisting information on different categories of food recipes that requires least number of ingredients
     
 # Demo 
-Please find the ![TheMealDB API Link]()
 You can go find out the API link here <a href="https://www.themealdb.com/api.php">TheMealDB API</a>
 
 ![MealsDB Demo](https://github.com/pranaykumar999/masai-sprint-3/blob/main/compressed.gif)
 
 # Tech Stacks
+
 * HTML5
 * CSS3
 * JavaScript
